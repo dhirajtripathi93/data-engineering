@@ -1,0 +1,11 @@
+packages:
+  - package: dbt-labs/dbt_utils
+    version: [">=1.3.0", "<2.0.0"]
+  - package: dbt-labs/codegen
+    version: [">=0.14.0", "<1.0.0"]
+
+
+  # We are using dbt_utils and codegen packages. dbt utils allows us to 
+  # use various utility macros and functions in our dbt projects. for example, surrogate keys, date utilities, and more.
+  # we will then leverage the surrogate key macro provided by dbt_utils to generate unique identifiers for our models.
+  # The codegen package helps us generate code for our dbt models, making it easier to maintain and scale our projects.

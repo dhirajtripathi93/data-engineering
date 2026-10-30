@@ -5,6 +5,8 @@ with source as (
 renamed as (
     select
         -- identifiers (standardized naming for consistency across yellow/green)
+
+        {{ dbt_utils.generate_surrogate_key(['vendorid', 'tpep_pickup_datetime']) }} as trip_id,
         cast(vendorid as integer) as vendor_id,
         cast(ratecodeid as integer) as rate_code_id,
         cast(pulocationid as integer) as pickup_location_id,
