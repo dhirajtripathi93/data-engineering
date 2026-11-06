@@ -1,8 +1,10 @@
 # Byte-compiled / optimized / DLL files
 *.parquet
+*.parquet.crc *.crc
 __pycache__/
 *.py[codz]
 *$py.class
+*.csv
 
 # C extensions
 *.so
